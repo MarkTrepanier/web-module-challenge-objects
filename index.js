@@ -114,9 +114,9 @@ Write a function that creates an object with name, rating, feedback, add the new
 function addReview(array, name, rating, feedback){
   const newReview = {name, rating, feedback}
   array.push(newReview);
-  return newReview;
+  return array;
 }
-addReview(reviews, 'Daniela', 5, 'greateats!');
+addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!');
 console.log(reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
