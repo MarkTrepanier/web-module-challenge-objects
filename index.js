@@ -15,8 +15,8 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*initial commit*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    return {name, price, category};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,7 +28,13 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+// todo fix bug?
+const pastele = createMenuItem('pastele', 5, 'Lunch');
+const pastelillo = createMenuItem('pastelillo', 3, 'Lunch');
+const coquito = createMenuItem('coquito', 8, 'Drinks');
+console.log(pastele);
+console.log(pastelillo);
+console.log(coquito);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,8 +53,21 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(string){
+    switch (string){
+      case 'teacher':
+        return this.price - this.price * .25;
+        break;
+      case 'student':
+        return this.price - this.price * .25;
+        break;
+      default:
+        return this.price - this.price * .1; 
+    }
+  }
 }
+
+console.log(burger.discount('student'));
 
 
 
@@ -68,7 +87,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5]['feedback']);
 
 
 
